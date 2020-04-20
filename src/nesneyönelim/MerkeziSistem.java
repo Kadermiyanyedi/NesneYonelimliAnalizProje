@@ -1,14 +1,15 @@
 package nesneyönelim;
 
 public class MerkeziSistem {
-	private int temp;
+	private int temp=0;
 	
 	Eyleyici ey = new Eyleyici();
 	EyleyiciModül eym = new EyleyiciModül(ey);
 	SıcaklıkAlgılayıcı sa = new SıcaklıkAlgılayıcı();
 	
 	public int SıcaklıkGetir() {
-		temp = sa.getTemperature();
+		if(temp == 0)
+			temp = sa.getTemperature();
 		return temp;
 	}
 	
