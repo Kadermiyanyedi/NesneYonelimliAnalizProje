@@ -24,31 +24,33 @@ public class UserKontrol{
 		System.out.println(e);
 	}
 }
-	public boolean Control(String user, String pass) {
+	public int UserControl(String user) {
 
 		if(name[0].equals(user)) {
-			if(password[0].equals(pass)) {
-				System.out.println("Login successful");
-				return true;
-			}
-			else System.out.println("Wrong Password");
+			return 0;
 		}
 		if(name[1].equals(user)) {
-			if(password[1].equals(pass)) {
-				System.out.println("Login successful");
-				return true;
-			}
-			else System.out.println("Wrong Password");
+			return 1;
 		}
 		if(name[2].equals(user)) {
-			if(password[2].equals(pass)) {
-				System.out.println("Login successful");
-				return true;
-			}
-			else System.out.println("Wrong Password");
+			return 2;
 		}
-		return false;
+		else {
+			System.out.println("Wrong User Name");
+			return -1;
+		}
 	}
-
+	
+	public boolean PassControl(String pass,int deger) {
+		System.out.println(password[deger]);
+		if(password[deger].equals(pass)) {
+			System.out.println("Login successful");
+			return true;
+		}
+		else {
+			System.out.println("Wrong Password");
+			return false;
+		}
+	}
   
 }
