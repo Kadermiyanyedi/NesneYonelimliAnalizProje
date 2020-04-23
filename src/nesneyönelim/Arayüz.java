@@ -39,8 +39,8 @@ public class Arayüz {
 	}
 	
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
+		DatabaseConnection instance = DatabaseConnection.getInstance();
+		/*Scanner sc = new Scanner(System.in);
 		UserKontrol control = new UserKontrol();
 		control.DatabaseUsers();
 		MerkeziSistem ms = new MerkeziSistem();
@@ -62,7 +62,7 @@ public class Arayüz {
 		if(temp)
 			Islem(ms);
 		else
-			System.out.println("Giriş hakkınız dolmuştur");
+			System.out.println("Giriş hakkınız dolmuştur");*/
 		
 	}
 }
