@@ -1,6 +1,7 @@
 package nesneyönelim;
 import java.sql.*;
 
+
 public class UserKontrol{
 	
 	String[] name = new String[3];
@@ -42,7 +43,6 @@ public class UserKontrol{
 	}
 	
 	public boolean PassControl(String pass,int deger) {
-		System.out.println(password[deger]);
 		if(password[deger].equals(pass)) {
 			System.out.println("Login successful");
 			return true;

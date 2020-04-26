@@ -1,5 +1,4 @@
 package nesneyönelim;
-import java.sql.*;
 import java.util.Scanner;
 public class Arayüz {
 	
@@ -13,6 +12,7 @@ public class Arayüz {
 	}
 	
 	public static void Islem(MerkeziSistem ms) {
+		
 		Scanner sc = new Scanner(System.in);
 		int secim;
 		do {
@@ -39,8 +39,7 @@ public class Arayüz {
 	}
 	
 	public static void main(String[] args) {
-		DatabaseConnection instance = DatabaseConnection.getInstance();
-		/*Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		UserKontrol control = new UserKontrol();
 		control.DatabaseUsers();
 		MerkeziSistem ms = new MerkeziSistem();
@@ -62,7 +61,7 @@ public class Arayüz {
 		if(temp)
 			Islem(ms);
 		else
-			System.out.println("Giriş hakkınız dolmuştur");*/
+			System.out.println("Your right of entry has expired");
 		
 	}
 }
