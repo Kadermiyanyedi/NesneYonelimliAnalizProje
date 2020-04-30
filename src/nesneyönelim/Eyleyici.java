@@ -3,6 +3,7 @@ package nesneyönelim;
 import java.util.ArrayList;
 
 public class Eyleyici implements Subject{
+	
 	private ArrayList observers;
 	private int temperature;
 	private int temp;
@@ -28,6 +29,7 @@ public class Eyleyici implements Subject{
             temperature = observer.SogutucuAc(temp);
         }
     }
+    
     public void notifyObservers2() {
         for (int i = 0; i < observers.size(); i++) {
             Observer observer = (Observer)observers.get(i);

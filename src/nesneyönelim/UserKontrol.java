@@ -4,8 +4,8 @@ import java.sql.*;
 
 public class UserKontrol{
 	
-	String[] name = new String[3];
-	String[] password = new String[3];
+	String[] name = new String[10];
+	String[] password = new String[10];
 	
 	public void DatabaseUsers(){
 		DatabaseConnection instance = DatabaseConnection.getInstance();
@@ -26,20 +26,15 @@ public class UserKontrol{
 	}
 }
 	public int UserControl(String user) {
-
-		if(name[0].equals(user)) {
-			return 0;
+		int deger = 0;
+		for(String i: name) {
+			if(i.equals(user)) {
+				return deger;
+			}
+			deger++;
 		}
-		if(name[1].equals(user)) {
-			return 1;
-		}
-		if(name[2].equals(user)) {
-			return 2;
-		}
-		else {
 			System.out.println("Wrong User Name");
 			return -1;
-		}
 	}
 	
 	public boolean PassControl(String pass,int deger) {

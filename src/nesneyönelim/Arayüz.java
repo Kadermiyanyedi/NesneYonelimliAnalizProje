@@ -3,34 +3,33 @@ import java.util.Scanner;
 public class Arayüz {
 	
 	public static boolean kullanicigonder(String user, String pass, UserKontrol control) {
-		int deger = control.UserControl(user);
-		if(deger>=0) {
-			return control.PassControl(pass, deger);
+		if(control.UserControl(user)>=0 && control.PassControl(pass,control.UserControl(user))) {
+			return true;
 		}
 		else
 			return false;
 	}
 	
-	public static void Islem(MerkeziSistem ms) {
+	public static void Islem(MerkeziSistem m) {
 		
 		Scanner sc = new Scanner(System.in);
 		int secim;
 		do {
 		System.out.println("\nLütfen yapmak istediginiz islemi seciniz: \n1-Sicaklik Göster "
-				+ "\n2-Sogutucu Ac\n3-Sogutucu Kapa\n4-Cikis");
+				+ "\n2-Sogutucu Ac\n3-Sogutucu Kapa\n4-Programdan Cik");
 		
 		secim = sc.nextInt();
 		sc.nextLine();
 		
 		switch(secim) {
 		case 1: 
-			System.out.println("Ortam sıcaklığı: "+ms.SıcaklıkGetir());
+			System.out.println("Ortam sıcaklığı: "+m.SıcaklıkGetir());
 			break;
 		case 2:
-			ms.SogutucuAc();
+			m.SogutucuAc();
 			break;
 		case 3:
-			ms.SogutucuKapa();
+			m.SogutucuKapa();
 			break;
 			
 		}
@@ -39,10 +38,13 @@ public class Arayüz {
 	}
 	
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		UserKontrol control = new UserKontrol();
 		control.DatabaseUsers();
+		
 		MerkeziSistem ms = new MerkeziSistem();
+		
 		int sayac = 0;
 		boolean temp = false;
 		while(sayac<3) {
