@@ -8,17 +8,18 @@ public class MerkeziSistem {
 	EyleyiciModül eym = new EyleyiciModül();
 	SıcaklıkAlgılayıcı sa = new SıcaklıkAlgılayıcı();
 	
-	public void MerkeziSistem() {
+	public MerkeziSistem() {
 		ey.registerObserver(eym);
 	}
 	public int SıcaklıkGetir() {
-		if(temp == 0)
-			temp = sa.ReadTemperature();
+		temp = sa.ReadTemperature();
 		return temp;
 	}
 	
 	public void SogutucuAc() {
-		temp = ey.sogutucuAc(temp);
+		this.temp = ey.sogutucuAc(temp);
+		sa.TemperatureUpdate(temp);
+		
 	}
 	
 	public void SogutucuKapa() {

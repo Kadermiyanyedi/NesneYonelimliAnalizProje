@@ -20,6 +20,7 @@ public class DatabaseConnection {
             System.out.println("Database Connection Creation Failed : " + ex.getMessage());
         }
     }
+    
     public static Connection getConnection() {
         return connection;
     }

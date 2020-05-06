@@ -16,7 +16,7 @@ public class Arayüz {
 		int secim;
 		do {
 		System.out.println("\nLütfen yapmak istediginiz islemi seciniz: \n1-Sicaklik Göster "
-				+ "\n2-Sogutucu Ac\n3-Sogutucu Kapa\n4-Programdan Cik");
+				+ "\n2-Sogutucu Ac\n3-Sogutucu Kapa\n4-Cikis");
 		
 		secim = sc.nextInt();
 		sc.nextLine();
